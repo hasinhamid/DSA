@@ -25,6 +25,8 @@ public class singlyLinkedL {
         arr.printLL();
         list.printLL();
         System.out.println(list.search(0)); //5
+        list.reverseList();
+        list.printLL();
     }
 }
 class node{
@@ -174,6 +176,22 @@ class LL{
 
         }
         return ind;
+    }
+    public void reverseList(){
+        if(size>1){
+            node ptr1=head;
+            node ptr2=head.next;
+            while(ptr2!=null){
+                node ptr3= ptr2.next;
+                ptr2.next=ptr1;
+                ptr1=ptr2;      
+                ptr2=ptr3;
+            }
+            head.next= null;
+            head=ptr1;
+        }
+        
+        
     }
 
     
