@@ -4,9 +4,9 @@ public class singlyLinkedL {
     public static void main(String[] args) {
         LL list= new LL();
         System.out.println(list.size());
-        list.addLast(9);  //[9]
-        list.remove(9);    //[null]
-        list.printLL();       //nothing
+        // list.addLast(9);  //[9]
+        // list.remove(9);    //[null]
+        // list.printLL();       //nothing
         list.addFirst(2);   //2
         list.addFirst(3);   //3,2
         list.addFirst(5);   //5,3,2
@@ -15,18 +15,18 @@ public class singlyLinkedL {
         list.addLast(0);    //4,1,5,3,2,0
         list.printLL();       //print [4,1,5,3,2,0]
 
-        list.remove(5);     //5removed
+        list.remove(3);     //5removed
         list.printLL();       //print [4,1,3,2,0]
-        list.addByIndex(2, 8);
-        list.printLL();         //[4,1,8,3,2,0]
-        System.out.println(list.size());    //6
-        int[] ar={1,2,3,4};
-        LL arr=new LL(ar);
-        arr.printLL();
-        list.printLL();
-        System.out.println(list.search(0)); //5
-        list.reverseList();
-        list.printLL();
+        // list.addByIndex(2, 8);
+        // list.printLL();         //[4,1,8,3,2,0]
+        // System.out.println(list.size());    //6
+        // int[] ar={1,2,3,4};
+        // LL arr=new LL(ar);
+        // arr.printLL();
+        // list.printLL();
+        // System.out.println(list.search(0)); //5
+        // list.reverseList();
+        // list.printLL();
     }
 }
 class node{
