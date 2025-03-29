@@ -14,7 +14,7 @@ public class DynamicArray<T> implements Iterable<T> {
       this.capacity = capacity;
       arr = (T[]) new Object[capacity];
     }
-    @SuppressWarnings("unchecked")
+    // @SuppressWarnings("unchecked")
     public int size() {
       return len;
     }
