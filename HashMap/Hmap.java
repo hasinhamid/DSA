@@ -1,5 +1,3 @@
-package HashMap;
-
 public class Hmap {
     public static void main(String[] args) {
         Hashmap name= new Hashmap();

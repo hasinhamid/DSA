@@ -31,6 +31,7 @@ public class Dlist {
             nn.prev= curr;
         }
     }
+    
     public void addF(int a){
         node nn= new node(a);
         if(head==null){
