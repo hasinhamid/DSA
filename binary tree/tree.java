@@ -25,7 +25,7 @@ public class tree {
 }
 
 //DFS:
-//preorder (root->left->right)
+//preorder (root->left->right)      //build eta diye kore coz root age na banaile left right kemne banabe
 //inorder   (left->root->right)
 //postorder (left->right->root)
 
