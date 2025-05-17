@@ -9,6 +9,7 @@ public class count {
         // int sum= sum(root);
         // System.out.println(sum);
         System.out.println(diameter(root));
+        System.out.println(depth(root, 3, 0));
     }
     // sum
     public static int sum(node n){
@@ -96,6 +97,26 @@ public class count {
             right=null;
             left=null;
         }
+    }
+    public static int depth(node root, int target, int cur){
+        if(root==null){
+            return -1;
+        }
+        if(root.val==target){
+            return cur;
+        }
+        int left=depth(root.left, target, cur+1);
+        int right=depth(root.right, target, cur+1);
+        if (left!=-1 || right!=-1) {
+            if(left!=-1){
+                return left;
+            }
+            else if(right!=-1){
+                return right;
+            }
+        }
+        
+        return -1;
     }
 }
 
