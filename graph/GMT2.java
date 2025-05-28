@@ -5,19 +5,20 @@ import java.util.Stack;
 public class GMT2 {
     public static void main(String[] args) {
         int[][] edge={
-            {0, 0, 0, 0, 0, 0, 0}, 
-            {1, 0, 0, 0, 0, 0, 0}, 
-            {0, 1, 0, 0, 0, 0, 0}, 
-            {0, 1, 1, 0, 0, 1, 0}, 
-            {1, 0, 0, 1, 1, 0, 0}, 
-            {1, 0, 0, 0, 1, 0, 0}, 
-            {0, 0, 1, 0, 1, 0, 0}
+            {0, 0, 1, 1, 1, 1, 1, 0, 0}, 
+            {0, 0, 0, 0, 1, 1, 0, 0, 0}, 
+            {1, 0, 0, 1, 1, 0, 0, 0, 0}, 
+            {1, 0, 1, 0, 0, 1, 0, 0, 0}, 
+            {1, 1, 1, 0, 0, 1, 0, 0, 0}, 
+            {1, 1, 0, 1, 1, 0, 0, 1, 1}, 
+            {1, 0, 0, 0, 0, 0, 0, 0, 0},
+            {0, 0, 0, 0, 0, 1, 0, 0, 0},
+            {0, 0, 0, 0, 0, 1, 0, 0, 0}
+
         };
         grp gp=new grp(edge, edge.length);
-        gp.dfs();
-        System.out.println();
-        boolean []vis=new boolean[7];
-        gp.recDFS(vis, 6);
+        boolean []vis=new boolean[9];
+        gp.recDFS(vis, 3);
     }
 }
 
@@ -55,11 +56,11 @@ class grp{
     }
     public void recDFS(boolean [] vis,int start){
         vis[start]=true;
-        System.out.print(start+" ");
-        for(int i=matrix.length-1;i>=0;i--){
+        for(int i=0;i<matrix.length;i++){
             if(matrix[start][i]!=0 && !vis[i]){
                 recDFS(vis, i);
             }
         }
+        System.out.print(start+" ");
     }
 }
